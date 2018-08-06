@@ -1,0 +1,29 @@
+public class Main {
+
+    public static void main(String[] args) {
+        String psw = "LKkhjlja";
+        int length = psw.length();
+
+        public static boolean checkregister (String psw){
+            Pattern p = Pattern.compile("^*[a-z]*$");
+            Matcher m = p.matcher(psw);
+            return m.matches();
+        }
+
+        public static boolean checkregister2 (String psw){
+            Pattern p = Pattern.compile("^*[A-Z]*$");
+            Matcher m = p.matcher(psw);
+            return m.matches();
+        }
+
+        public static boolean checkfigers (String psw){
+            Pattern p = Pattern.compile("^*[0-9]*$");
+            Matcher m = p.matcher(psw);
+            return m.matches();
+        }
+        if (length >= 8 && checkregister(psw) && checkregister2(psw) && checkfigers(psw)) {
+            System.out.println("Запомнить Ваш пароль?");
+        } else {
+            System.out.println("Попробуйте заново. Пароль должен быть не менее 8 знаков, содержать минимум 1 число, 1 строчную букву и одну заглавную");
+        }
+    }
