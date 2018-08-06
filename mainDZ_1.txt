@@ -1,0 +1,38 @@
+package Listarray;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
+
+public class Main {
+    public static void main(String[] args) {
+        ArrayList<String> al = new ArrayList<>();
+        al.add("Казань");
+        al.add("Москва");
+        al.add("Калининград");
+        al.add("Санкт-Петербург");
+        al.add("Нижний Новгород");
+        al.add("Волгоград");
+        al.add("Казань");
+        al.add("Самара");
+        al.add("Саранск");
+        al.add("Москва");
+        al.add("Ростов-на-Дону");
+        al.add("Санкт-Петербург");
+        al.add("Сочи");
+        al.add("Екатеринбург");
+
+        Map<String, Integer> hm = new HashMap<>();
+
+        for (int i = 0; i < al.size(); i++) {
+            int repeat=1;
+            for (int j = 0; j < al.size(); j++) {
+                if (i!=j && al.get(i).equalsIgnoreCase(al.get(j))) {
+                    repeat++;
+                }
+                hm.put(al.get(i), repeat);
+            }
+        }
+        System.out.println(hm);
+    }
+}
