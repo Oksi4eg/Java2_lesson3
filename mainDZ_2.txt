@@ -1,0 +1,31 @@
+package Listarray;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
+
+public class Main {
+    public static void main(String[] args) {
+
+        ArrayList<Integer> Petrov = new ArrayList<>();
+        Petrov.add(111);
+
+        ArrayList<Integer> Sidorov = new ArrayList<>();
+        Sidorov.add(222);
+        Sidorov.add(333);
+
+        ArrayList<Integer> Ivanov = new ArrayList<>();
+        Ivanov.add(444);
+
+        Map<String, ArrayList<Integer>> contactBook = new HashMap<>();
+
+        contactBook.put("Petrov", Petrov);
+        contactBook.put("Sidorov", Sidorov);
+        contactBook.put("Ivanov", Ivanov);
+
+        System.out.println(contactBook);
+
+        Petrov.add(999);
+        System.out.println(contactBook.get("Petrov"));
+    }
+}
